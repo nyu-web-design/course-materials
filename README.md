@@ -6,4 +6,10 @@
 
 This repository contains examples and other materials to accompany [the Web Design course](https://knowledge.kitchen/Web_Design_Schedule).
 
-- See the [examples](./examples) directory for examples.
+## Examples
+
+See the `examples` directory on GitHub.
+
+Live examples hosted on GitHub Pages:
+
+- [HTML](https://nyu-web-design.github.io/course-materials/examples/html-intro)
