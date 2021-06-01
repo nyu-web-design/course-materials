@@ -1,0 +1,134 @@
+# Compiled python files
+*.py[oc]
+*$py.class
+
+# python artifacts
+__pycache__/
+
+# virtual environments
+# Environments
+.env
+.env/
+.venv
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# pyenv
+.python-version
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Sphinx documentation
+docs/_build/
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# gedit and emacs backup files
+*~
+
+# Notepad++ files
+nppBackup/
+
+# Special dirs and files
+build/
+dist/
+bin/
+spyder.egg-info/
+Thumbs.db
+desktop.ini
+.DS_Store/
+spyder_crash.log
+.DS_Store
+.spyproject
+.idea/
+.cache
+.coverage*
+MANIFEST
+
+.installed.cfg
+develop-eggs
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
+
+# git .orig files
+*.orig
+
+# log files
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Rope project folders
+.ropeproject/
+.vscode/
+result.xml
+
+# Pylint dirs/files
+.pylint.d/
+
+# Ignore setuptools development files in the PyLS subrepo
+external-deps/python-language-server/python_language_server.egg-info/
+
