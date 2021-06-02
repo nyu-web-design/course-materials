@@ -12,4 +12,5 @@ This repository contains examples and other materials to accompany [the Web Desi
 
 - See the [examples directory](https://github.com/nyu-web-design/course-materials/tree/main/examples) to view source material.
 - Deployed examples:
-  - [HTML](https://nyu-web-design.github.io/course-materials/examples/html-intro)
+  - [HTML](https://nyu-web-design.github.io/course-materials/examples/1.html-intro)
+  - [HTML again](https://nyu-web-design.github.io/course-materials/examples/2.html-again)
