@@ -1,0 +1,79 @@
+h1 {
+  font-weight: normal;
+  font-size: 52px;
+  text-transform: uppercase;
+}
+
+p {
+  /* 
+    there are various ways to refer to colors:
+        keywords: e.g. green,
+        rgb: e.g. rgb(0, 255, 0);
+        hexadecimal codes: e.g. #00ff00
+    */
+  font-family: georgia, serif;
+  margin: 20px; /* adding a 20 pixel space around each side of each paragraph */
+}
+
+p#copyright {
+  font-size: 10px;
+  /* specify a font, but also a backup in case that font is not available */
+  font-family: helvetica, sans-serif;
+}
+
+figure {
+  /* constrain the width of the figure and anything inside of it */
+  background-color: pink;
+  width: 500px;
+  padding: 10px; /* elements within the figure are pushed 10 pixels away from the edge of the figure */
+}
+
+img#goose {
+  /* force the image to be sized to fit within its containing element */
+  width: 100%;
+}
+
+p.green {
+  color: green;
+}
+
+a {
+  color: blue;
+  text-decoration: overline; /* e.g. underline, overline, none */
+}
+a:active {
+  color: pink;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: fuchsia;
+  font-size: 64px;
+}
+
+/* style only images within the header element */
+/* the space in the selector indicates nesting structure */
+header img {
+  border: 10px dotted red;
+}
+
+/* style only articles that are direct child elements of an article element */
+article > a {
+  background-color: red;
+}
+
+/* apply the same set of styles to two different selectors */
+/* the comma separating the two means they are independent selectors */
+li#item1,
+li#item4 {
+  color: green;
+  background-color: pink;
+  font-family: arial;
+  border: 1px solid green; /* set all three border styles at once */
+  /*
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  */
+}
