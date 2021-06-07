@@ -1,0 +1,44 @@
+/* select for any element with class="container" */
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 300px; */ /* DO NOT SET A FIXED HEIGHT! */
+  border: 1px solid red;
+  padding: 20px;
+}
+
+.clear {
+  /* clearfix hack! */
+  /* background-color: red; */
+  /* height: 20px; */
+  clear: both;
+}
+
+.column {
+  float: left;
+  display: block;
+  width: 370px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#p2 {
+  margin-left: 0px;
+  color: green;
+  background-color: blue;
+}
+
+#p3 {
+  margin-right: 0px;
+  color: blue;
+  background-color: green;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  text-transform: uppercase;
+}
