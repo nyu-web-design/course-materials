@@ -35,10 +35,73 @@
   background-color: green;
 }
 
-a {
+.column a {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
   color: white;
   text-transform: uppercase;
+}
+
+header img,
+header h1 {
+  float: left;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+}
+header h1 {
+  width: 480px;
+  margin-left: 20px;
+  height: 100px;
+  line-height: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+nav.topnav {
+  float: left;
+  width: 200px;
+}
+
+nav.topnav ul {
+  margin: 0px;
+  padding: 0px;
+  padding: 10px;
+  list-style-position: inside;
+  list-style-type: none;
+  background-color: pink;
+}
+
+nav.topnav ul li {
+  width: 60px;
+  float: left;
+  height: 80px;
+  line-height: 80px;
+}
+
+footer p.copyright {
+  float: left;
+  width: 400px;
+}
+
+footer nav.footernav {
+  float: left;
+  width: 400px;
+}
+
+footer nav.footernav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+footer nav.footernav ul li {
+  float: left;
+  width: 100px;
+}
+
+footer nav.footernav ul li.like_link {
+  width: 200px;
 }
