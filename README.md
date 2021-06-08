@@ -16,3 +16,4 @@ This repository contains examples and other materials to accompany [the Web Desi
   - [HTML again](https://nyu-web-design.github.io/course-materials/examples/2.html-again)
   - [CSS](https://nyu-web-design.github.io/course-materials/examples/3.css-intro)
   - [CSS again](https://nyu-web-design.github.io/course-materials/examples/4.css-layout)
+  - [JQuery](https://nyu-web-design.github.io/course-materials/examples/5.jquery-intro)

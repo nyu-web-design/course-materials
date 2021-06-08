@@ -1,0 +1,74 @@
+.container {
+  width: 800px;
+  border: 10px dotted pink;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+section.two-column article {
+  float: left;
+  width: 380px;
+  padding: 20px;
+}
+
+#article1 {
+  padding-left: 0;
+}
+
+#article2 {
+  padding-right: 0;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 100px;
+  font-family: helvetica, sans-serif;
+  font-size: 30px;
+  border: 10px solid pink;
+  margin: 0 auto;
+  display: block;
+}
+
+.primary:hover {
+  background-color: pink;
+  color: blue;
+  cursor: pointer;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+img#donkey {
+  display: none;
+}
+
+h1 span#page_title_2 {
+  display: none;
+}
+
+h1 span#change_page_title {
+  text-decoration: underline;
+  font-size: 14px;
+  color: blue;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+img#airplane {
+  position: absolute;
+  top: 200px;
+  left: -200px;
+}
