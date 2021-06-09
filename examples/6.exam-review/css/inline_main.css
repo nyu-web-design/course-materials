@@ -1,0 +1,30 @@
+p.b {
+  background-color: green;
+  display: block; /* default */
+  width: 50%;
+}
+
+p.i {
+  background-color: red;
+  display: inline; /* overriding the default */
+  width: 50%;
+}
+
+img#donkey {
+  display: block;
+}
+
+strong {
+  background-color: purple;
+  color: white;
+}
+
+em {
+  background-color: blue;
+  color: white;
+}
+
+a {
+  background-color: orange;
+  color: purple;
+}

@@ -1,0 +1,22 @@
+div.container {
+  background-color: pink;
+  width: 400px;
+  float: left;
+  border: 10px solid fuchsia;
+  margin: 20px;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: yellow;
+}
+
+.clear {
+  clear: both;
+}
+
+div > p,
+article > p {
+  color: green;
+}
