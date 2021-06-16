@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Responsive Layout!!!</title>
+
+		<!-- one global CSS file for all devices -->
+		<link rel="stylesheet" type="text/css" href="css/all_devices.css" />
+
+		<!-- different CSS files for different browser widths -->
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" 										href="css/mobile.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px) and (max-width: 960px)" 				href="css/tablet.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 961px)" 										href="css/desktop.css" />
+
+		<meta name="viewport" content="initial-scale=1">
+	</head>
+	<body>
+
+		<div id="wrapper">
+
+			<h1>Responsive Layout!!!</h1>
+
+			<p class="responsive desktop tablet">This is really not important stuff that shows up only on desktop and tablet</p>
+			<p class="responsive mobile">This is critical stuff that shows up on mobile only.</p>
+			<p class="responsive desktop mobile">This is stuff that shows up on desktop or mobile.</p>
+
+		</div>
+
+	</body>
+</html>
+

@@ -1,0 +1,39 @@
+div.clear {
+	clear: both;
+}
+
+div#wrapper {
+	width: 100%;
+	margin: 0 auto; /* top & bottom margins are 0, left and right margins are equal */
+	border: 1px dotted gray;
+}
+
+
+header {
+	background-color: lightblue;
+	text-align: center;
+}
+
+footer {
+	background-color: pink;
+}
+
+section {
+	padding: 1.041666666667%;
+}
+
+section article {
+	background-color: orange;
+	float: left;
+	width: 48.958333333333%;
+}
+
+section article img {
+	max-width: 100%;
+}
+
+
+
+
+
+

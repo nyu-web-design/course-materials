@@ -1,0 +1,8 @@
+h1 {
+	font-size: 36px;
+	background-color: pink;
+}
+
+.responsive.desktop {
+	display: block;
+}
