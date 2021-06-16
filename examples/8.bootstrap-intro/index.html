@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beautiful Flowers</title>
+    <!-- tell the browser to support all unicode characters -->
+    <meta charset="utf-8" />
+    <!-- tell mobile browsers not to zoom in automatically -->
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- import css, including bootstrap's first -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- import js, including bootstrap's first -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="display-1">Beautiful Flowers</h1>
+        <p class="lead">
+          Flowers are
+          <a
+            href="#"
+            data-bs-toggle="tooltip"
+            title="Just look at those lovely tulips!"
+            >absolutely stunning</a
+          >. Get outside now and start sniffing.
+        </p>
+      </header>
+
+      <!-- begin carousel -->
+      <div
+        id="carouselExampleControls"
+        class="carousel slide mb-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/tulips1.png"
+              class="d-block w-100"
+              alt="Beautiful tulips from Holland."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/tulips2.png"
+              class="d-block w-100"
+              alt="Some more beautiful tulips from Holland."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/tulips3.png"
+              class="d-block w-100"
+              alt="Can't remember who took these photos...but thank you."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- end carousel -->
+
+      <!-- side-by-side column elements must be in a parent element with class="row -->
+      <main class="row">
+        <!-- each article has responsive breakpoints set for it -->
+        <article class="col-12 col-md-6 col-xl-4">
+          <h2>Hyacinths</h2>
+          <p>
+            Quia illo ut voluptas repudiandae illum debitis praesentium.
+            Corporis error eaque ad qui. Inventore quis minus in. Quam officiis
+            non provident et molestias et. Sed a doloremque similique odit
+            consequuntur voluptate quo. Magnam alias veniam non cumque
+            consequatur doloremque porro necessitatibus.
+          </p>
+          <img class="img-thumbnail img-fluid" src="images/hyacinth.png" />
+          <a href="hyacinths.html" class="btn btn-primary d-block mx-auto mt-3">
+            Learn more
+          </a>
+        </article>
+
+        <article class="col-12 col-md-6 col-xl-4">
+          <h2>Rhododendrons</h2>
+          <p>
+            Aut sed ut voluptate unde rerum quas ex sequi. Voluptate dolorum
+            dolore illum consequatur et. Error eaque unde voluptas.
+          </p>
+          <img class="img-thumbnail img-fluid" src="images/rhododendron.png" />
+          <a
+            href="rhododendrons.html"
+            class="btn btn-primary d-block mx-auto mt-3"
+          >
+            Learn more
+          </a>
+        </article>
+
+        <article class="col-12 col-md-6 col-xl-4">
+          <h2>Tulips</h2>
+          <p>
+            Corporis error eaque ad qui. Inventore quis minus in. Quam officiis
+            non provident et molestias et. Sed a doloremque similique odit
+            consequuntur voluptate quo.
+            <span>Magnam alias veniam non cumque consequatur doloremque</span>
+            porro necessitatibus. dolore illum consequatur et. Error eaque unde
+            voluptas.
+          </p>
+          <img class="img-thumbnail img-fluid" src="images/tulip.png" />
+          <a href="tulips.html" class="btn btn-primary d-block mx-auto mt-3">
+            Learn more
+          </a>
+        </article>
+      </main>
+
+      <footer>
+        &copy; 2021. All rights reserved. Nothing free or open about this!
+      </footer>
+    </div>
+  </body>
+</html>

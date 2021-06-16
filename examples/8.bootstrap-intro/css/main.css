@@ -1,0 +1,27 @@
+article h2 {
+  text-decoration: overline;
+  font-family: georgia, serif;
+}
+
+article p span {
+  background-color: yellow;
+}
+
+/* override bootstrap's styles for the buttons in articles */
+article a.btn-primary {
+  background-color: pink;
+  border-color: black;
+  color: black;
+  border-radius: 0; /* get rid of rounded corners */
+  box-shadow: 0 5px 5px #f0f0f0; /* a light gray drop shadow */
+}
+article a.btn-primary:hover {
+  background-color: black;
+  border-color: pink;
+  color: pink;
+}
+
+/* override some features of bootstrap's default image thumbnail class */
+.img-thumbnail {
+  background-color: pink;
+}
