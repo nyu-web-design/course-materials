@@ -17,3 +17,5 @@ This repository contains examples and other materials to accompany [the Web Desi
   - [CSS](https://nyu-web-design.github.io/course-materials/examples/3.css-intro)
   - [CSS again](https://nyu-web-design.github.io/course-materials/examples/4.css-layout)
   - [JQuery](https://nyu-web-design.github.io/course-materials/examples/5.jquery-intro)
+  - Responsive [scaling](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_scaling/) and [breakpoint-based](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_breakpoints/) layouts
+  - [Bootstrap](https://nyu-web-design.github.io/course-materials/examples/8.bootstrap-intro/)
