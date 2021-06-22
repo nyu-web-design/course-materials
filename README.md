@@ -19,4 +19,4 @@ This repository contains examples and other materials to accompany [the Web Desi
   - [JQuery](https://nyu-web-design.github.io/course-materials/examples/5.jquery-intro)
   - Responsive [scaling](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_scaling/) and [breakpoint-based](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_breakpoints/) layouts
   - [Bootstrap](https://nyu-web-design.github.io/course-materials/examples/8.bootstrap-intro/)
-  - Photoshop [flat file (.png)](https://nyu-web-design.github.io/course-materials/examples/9.photoshop/underwater_biden.png) / [source file (.psd)](https://nyu-web-design.github.io/course-materials/examples/9.photoshop/underwater_biden.psd)
+  - [Photoshop](https://nyu-web-design.github.io/course-materials/examples/9.photoshop/)
