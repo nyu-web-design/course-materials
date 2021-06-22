@@ -12,13 +12,10 @@ An example of common Photoshop techniques, including:
 - Selection tools, fills, and transforms
 - Concepts in composition and image selection
 
-## Source file
+## Image files
 
-[The source file in layered Photoshop format](./underwater_biden.psd).
-
-## Flat file
-
-The image in flat (layerless) and compressed .png form, ready to post to the web:
+- [The layered source file](./underwater_biden.psd) is available for editing in Photoshop `.psd` format.
+- The flat (layerless) and compressed `.png` file is ready for posting to the web:
 
 ![Biden Underwater, by Foo Barstein](underwater_biden.png)
 
