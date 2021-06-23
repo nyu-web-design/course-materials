@@ -7,6 +7,7 @@ Example of using Audacity to produce multi-track audio. Key concepts include:
 - Using the Selection tool to edit parts of the audio.
 - Using the Zoom tool to zoom in or out (click while holding the `Shift` key).
 - Using the Time Shift tool to move selected parts of the audio forward or backward in time.
+- Using the Envelope tool to create smooth volume shifts to tracks.
 - Reducing background noise with the Noise Reduction effect.
 - Evening sound levels with the Normalization effect.
 - Other effects, including Distortion, Echo, and Pitch Shift.
