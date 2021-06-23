@@ -21,3 +21,4 @@ This repository contains examples and other materials to accompany [the Web Desi
   - [Bootstrap](https://nyu-web-design.github.io/course-materials/examples/8.bootstrap-intro/)
   - [Photoshop](https://nyu-web-design.github.io/course-materials/examples/9.photoshop/)
   - [Animated GIFs](https://nyu-web-design.github.io/course-materials/examples/10.animated-gifs/)
+  - [Digital Audio](https://nyu-web-design.github.io/course-materials/examples/11.digital-audio/)
