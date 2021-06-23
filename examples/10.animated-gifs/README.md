@@ -16,7 +16,7 @@ Examples of animated GIF images, created with Photoshop, focusing on:
 
 - [The layered source file](./nft_winner.psd) is available for editing in Photoshop `.psd` format.
 - The flat (layerless) and compressed animated `.gif` file is ready for posting to the web:
-- inspired by [Siphon #12/20](https://opensea.io/assets/0x905e7e152ecd7315f03d8d671578ea72684cca99/33500010012) photo by [XCOPY](https://opensea.io/collection/xcopy).
+- inspired by [Siphon #12/20](https://opensea.io/assets/0x905e7e152ecd7315f03d8d671578ea72684cca99/33500010012) by [XCOPY](https://opensea.io/collection/xcopy).
 
 ![NFT-style Face, by Foo Barstein](nft_winner.gif)
 
