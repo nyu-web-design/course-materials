@@ -13,6 +13,14 @@ Example of using Audacity to produce multi-track audio. Key concepts include:
 - Other effects, including Distortion, Echo, and Pitch Shift.
 - Export to MP3 using the bundled [LAME MP3 encoder](https://lame.sourceforge.io/).
 
+## Interface
+
+Where to find the Tools in Audacity:
+![Audacity Tools](./images/audacity_tools.png)
+
+Where to find the Effects in Audacity:
+![Audacity Effects](./images/audacity_effects.png)
+
 ## Example
 
 - The exported stereo (two-track) compressed [`.mp3` file](./audacity_example.mp3) is ready for posting to the web.
