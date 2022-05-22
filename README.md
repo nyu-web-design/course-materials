@@ -54,7 +54,7 @@ Some materials that are not currently included in the course, but have been in t
 
 | Date | Class | Topics        | Notes                                                                                     | Reading/viewing due | Quiz due | Assignment due                                                      |
 | :--- | :---- | :------------ | :---------------------------------------------------------------------------------------- | :------------------ | :------- | :------------------------------------------------------------------ |
-| n/a  | n/a   | Video Montage | [Soviet montage slides](https://nyu-computer-science.github.io/web-design/soviet-montage) |                     |          | [Digital Video Assignment](https://classroom.github.com/a/Nc1IsNyv) |
+| n/a  | n/a   | Video Montage | [Soviet montage slides](https://nyu-computer-science.github.io/web-design/soviet-montage) |                     |          | [Digital Video Assignment](https://classroom.github.com/a/TXZhEhl8) |
 
 ## Copyright
 
