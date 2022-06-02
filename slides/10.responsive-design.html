@@ -1,0 +1,352 @@
+---
+layout: presentation
+title: Responsive Design
+permalink: /responsive-design/
+---
+
+class: center, middle
+
+# Responsive Design
+
+designing for a variety of devices
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Implications](#implications)
+1. [Approaches](#approaches)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+--
+
+## Concept
+
+**Responsive Design** is a catchy term for design that works on a variety of different devices
+
+--
+
+- Desktop computers (incluing laptops)
+
+--
+
+- Tablets
+
+--
+
+- Mobile devices
+
+---
+
+template: overview
+
+## Smartphone adoption
+
+Almost all American adults now own a smartphone. [Pew Research found 81% did](https://www.pewresearch.org/internet/fact-sheet/mobile/) in 2019, up from 35% in 2011. Younger adults reach 96% usage.
+![Smartphone ownership](../images/responsive_design_smartphone_ownership.png)
+
+---
+
+template: overview
+
+## Smartphone vs. desktop ownership
+
+A larger percentage of Americans own smartphones than do desktops.
+![Smartphone vs. desktop ownership](../images/responsive_design_pew_rural_chart.png)
+
+---
+
+template: overview
+
+## Multi-device ecosystem
+
+1/2 of adults also own a tablet device and half also own an e-reading device.
+![Other device ownership](../images/responsive_design_other_device_ownership.png)
+
+---
+
+template: overview
+
+## Smartphone-only
+
+1/5 Americans do not have home Internet service, but rely on smartphones for Internet. This is more common among the younger and less affluent.
+![Smartphone as only Internet connection](../images/responsive_design_smartphone_only_by_age.png)
+
+---
+
+template: overview
+
+## Flippening
+
+Smartphone dominance is a recent phenomenon, flipping [a few years ago](https://www.pewresearch.org/fact-tank/2019/05/31/digital-gap-between-rural-and-nonrural-america-persists/).
+![Pew Research chart of rural vs. suburban and urban Internet adoption](../images/responsive_design_pew_rural_chart.png)
+
+---
+
+name: implications
+
+# Implications
+
+--
+
+## Constraints
+
+The majority of Americans now consume content on The Web via their mobile devices. This imposes very specific constraints we have to consider in design.
+
+--
+
+- Smartphone devices have **smaller screens** than desktop devices.
+
+--
+
+- This means that **not as much content fits** on a mobile screen than on a desktop screen.
+
+--
+
+- Smartphone devices generally have **slower internet connections** than desktop devices.
+
+--
+
+- This means that smartphone **users are less inclined to click** links to load new pages than desktop users.
+
+---
+
+template: implications
+
+## Design effects
+
+As a result, web pages that are usable on smartphones as well as desktops and tablets have adopted a few relatively new design features.
+
+--
+
+- Sites with **fewer pages** (because pages load slowly)
+
+--
+
+- **Longer scrollable pages** (because you now need to stick more stuff on the main page)
+
+--
+
+- Bigger fonts and **less text** per page (because screens are ridiculously small)
+
+--
+
+- Requiring users to click a a **'hamburger' icon** to get to the main navigation (because there isn't a lot of space to show everything at once).
+
+---
+
+name: approaches
+
+# Approaches
+
+--
+
+## Choices choices
+
+Designers have tended to pick _one or both_ of two responsive design approaches.
+
+--
+
+- **Scaling layouts** - the width of the web page adjusts automatically to fill the width of whatever browser is being used to view it. _The layout and content otherwise remain the same across all devices._
+
+--
+
+- **Breakpoint-based layouts** - the width of the web page automatically switches between several fixed widths depending upon the width of the browser being used it. _The layout and content displayed on the page may differ from one width to another._
+
+--
+
+- **Hybrid layouts** - a combination of scaling and break-point based layout. Typically, breakpoint-based layouts will be used until a minimum width is reached, at which point a scaling layout is used at all browser widths smaller than the minimum width threshold.
+
+---
+
+template: approaches
+
+## Prevent mobile devices from zooming in
+
+By default, some browsers on mobile devices will automatically zoom into a page.
+
+--
+
+- They do this is because many websites are not properly designed to fit on mobile screens, so the browser manufacturers try to ensure that content is large enough for users to view on mobile, regardless of the intended design.
+
+--
+
+- This is undesireable for conscientious designers who want to control the width at which your content is displayed on mobile devices.
+
+--
+
+- To prevent this, add the following to the `head` element of the `html` code.
+
+```html
+<meta name="viewport" content="initial-scale=1" />
+```
+
+---
+
+template: approaches
+
+## Scaling layouts
+
+The technique for scaling layouts is the simpler of the two. [Download an example](../images/responsive_scaling.zip).
+
+--
+
+- Use percentages or other relative sizing units instead of pixel values for widths of all layout components
+
+--
+
+- This allows them to scale proportionally to whatever browser width is currently being used. The layout stays the same, but simply gets bigger or smaller depending on browser width.
+
+---
+
+template: approaches
+
+## Scaling layouts (continued)
+
+For example, imagine the following HTML code.
+
+```html
+<section>
+  <article>
+    <p>Foo bar baz</p>
+    <img src="images/soccer.jpg" />
+  </article>
+
+  <article>
+    <p>Foo bar baz</p>
+    <img src="images/basketball.png" />
+  </article>
+
+  <div class="clear"></div>
+</section>
+```
+
+---
+
+template: approaches
+
+## Scaling layouts (continued again)
+
+The following CSS would provide a scaling layout for this section.
+
+```css
+section {
+  padding: 1.041666666667%;
+}
+
+section article {
+  background-color: orange;
+  float: left;
+  width: 48.958333333333%;
+}
+
+section article img {
+  max-width: 100%;
+}
+```
+
+---
+
+template: approaches
+
+## Scaling layouts (continued once more)
+
+The **trick to calculating percentages** for scaling layouts...
+
+--
+
+- First design the page as a fixed-width layout, say with a container that is 1000px wide.
+
+--
+
+- Then determine the fixed widths for all the main components.
+
+--
+
+- Then set the container to be 100% instead of 1000px.
+
+--
+
+- And change the width of all margins, padding, borders, and widths to be their percentage equivalent.
+
+---
+
+template: approaches
+
+## Breakpoint-based layouts
+
+Breakpoint-based layouts rely on a feature of CSS called [media queries](http://www.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/)
+
+--
+
+- Media queries allow a page to switch between different sets of CSS code, depending upon the browser current width
+
+--
+
+- A typically breakpoint-based design may involve _3 or more different sets of CSS code_: one for mobile-sized browsers, another for tablet-sized browsers, and one for desktop-sized browsers.
+
+--
+
+- The layouts may be completely or only partially different at each different device width.
+
+--
+
+- The content may also be completely or only partially different at each different device width. This is achieved by hiding or showing differenet pieces of content setting the CSS `display` property for any piece of content with the `block` or `none` values.
+
+---
+
+template: approaches
+
+## Breakpoint-based layouts (continued)
+
+Media queries specify the width at which a set of CSS code should be loaded. [Download an example](../images/responsive_breakpoints.zip).
+
+--
+
+- For example, the following code would load only 1 of 3 different CSS files, depending on the current browser width.
+
+```html
+<!-- load different CSS files for different browser widths -->
+<link
+  rel="stylesheet"
+  media="only screen and (max-width: 480px)"
+  href="css/mobile.css"
+/>
+<link
+  rel="stylesheet"
+  media="only screen and (min-width: 481px) and (max-width: 960px)"
+  href="css/tablet.css"
+/>
+<link
+  rel="stylesheet"
+  media="only screen and (min-width: 961px)"
+  href="css/desktop.css"
+/>
+```
+
+--
+
+- Of course, there might be some styles that are consistent across all browser widths. These can be loaded without a media query.
+
+```html
+<link rel="stylesheet" type="text/css" href="css/all_devices.css" />
+```
+
+---
+
+name: conclusions
+
+# Conclusions
+
+--
+
+You now have an understanding of the issues related to designing for a variety of devices.
+
+- Thank you. Bye.

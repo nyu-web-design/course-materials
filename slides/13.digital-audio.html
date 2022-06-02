@@ -1,0 +1,367 @@
+---
+layout: presentation
+title: Digital Audio
+permalink: /digital-audio/
+---
+
+class: center, middle
+
+# Digital Audio
+
+recording and emitting sounds that someone might want to listen to
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Analog vs. Digital](#analog-vs-digital)
+1. [Audacity](#audacity)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+--
+
+## Concept
+
+We will take a look at the nature of sound, how it exists in the physical world, and how it is recorded and emitted by contemporary computers.
+
+---
+
+template: overview
+
+## What Is Sound
+
+Sound is the perceptible sensation that animals have in response to cyclical vibrations of the air or other medium surrounding them.
+
+--
+
+> If a tree falls in a forest and no one is around to hear it, does it make a sound?
+>
+> -paraphrased from George Berkeley's [Treatise Concerning Human Knowledge](https://en.wikipedia.org/wiki/A_Treatise_Concerning_the_Principles_of_Human_Knowledge), 1710
+
+---
+
+template: overview
+
+## Good vibrations
+
+The vibration of air (or other transmission medium) radiates outward from the source, creating waves of changes to the pressure and density of air particles.
+
+--
+
+- The air particles do not travel with the sound... they simply vibrate in place, causing those particles next to them to vibrate, and so on.
+
+--
+
+![Spherical compression of sound](../images/audio_spherical_compression.gif)
+
+---
+
+template: overview
+
+## Perception
+
+In humans and other [tetrapods](https://en.wikipedia.org/wiki/Tetrapod), the vibrating air waves are channeled into the inner parts of the ear, where they cause a vibration of the eardrum, a.k.a. **tympanic membrane**, which in turn causes the vibration of the **cochlea**.
+
+--
+
+![Fennec fox](../images/audio_fennec_fox.png)
+
+---
+
+template: overview
+
+## Frequency and pitch
+
+Different parts of the tympanic membrane vibrate in response to different frequencies of air vibration.
+
+--
+
+- Vibrations from each part of the tympanic membrane are _transduced_ into electrical signals, and sent along neurons to the brain.
+
+--
+
+- The patterns of these signals are interpreted and possibly recognized by the brain, leading to perception of different **pitches** and other of sound.
+
+--
+
+- watch [a video explaining how sound is perceived by the inner ear and brain](https://upload.wikimedia.org/wikipedia/commons/7/72/Journey_of_Sound_to_the_Brain.ogv).
+
+---
+
+template: overview
+
+## The limits of perception
+
+The average human is capable of hearing frequencies betweeen 20Hz and 20,000Hz.
+
+--
+
+- Lower frequencies are perceived as lower pitch.
+
+--
+
+- Higher frequencies are perceived as higher pitch.
+
+--
+
+- Frequencies use the unit, **Hertz**, which represents how many times per second a waveform oscillates back and forth.
+
+--
+
+- When it comes to sound waves, for example, 100Hz would mean that the air density and pressure increase and decrease cyclically 100 times per second.
+
+--
+
+- Give yourself [a quick-and-dirty hearing test](http://onlinetonegenerator.com/) (by no means conclusive) by playing sounds at different frequencies to see what you can perceive.
+
+---
+
+name: analog-vs-digital
+
+# Analog vs. Digital
+
+--
+
+## Analog
+
+If one were to map the pressure variations in air of a single frequency of sound over time, it might look something like this:
+
+![Analog wave](../images/audio_analog_wave.png)
+
+---
+
+template: analog-vs-digital
+
+## Digital
+
+A computer or other digital device has finite memory and storage, and can only do so many operations per second.
+
+--
+
+- For these reasons, a digital device can only record a certain number of **samples** of the amplitude of the actual physical sound each second.
+
+--
+
+- There is endless debate among audiophiles about whether humans can tell the difference between an analog signal and its well-sampled digital equivalent.
+
+---
+
+template: analog-vs-digital
+
+## ADC and DAC
+
+The conversion of an analog to digital signal is termed **ADC**, while the reverse is **DAC**.
+
+---
+
+template: analog-vs-digital
+
+## Fidelity (lo-fi)
+
+A low **sample rate** in ADC leads to a poor quality representation of the original waveform.
+
+![Digital wave](../images/audio_digital_wave1.png)
+
+--
+
+- draw a line connecting the dots and compare it to the original analog signal
+
+---
+
+template: analog-vs-digital
+
+## Fidelity (medium-fi)
+
+A medium **sample rate** leads to an ok, but not great, quality representation of the original waveform.
+
+![Digital wave](../images/audio_digital_wave2.png)
+
+--
+
+- draw a line connecting the dots and compare it to the original analog signal
+
+---
+
+template: analog-vs-digital
+
+## Fidelity (hi-fi)
+
+A high **sample rate** leads to a good quality representation of the original waveform.
+
+![Digital wave](../images/audio_digital_wave3.png)
+
+--
+
+- draw a line connecting the dots and compare it to the original analog signal
+
+---
+
+template: analog-vs-digital
+
+## Nyquist Shannon Theorum
+
+Engineers named **Harry Nyquist** and **Claude Shannon** theorized and proved in 1928 and 1949, respectively, that in order to faithful reproduce a waveform, it had to be sampled at a rate at least twice its frequency.
+
+--
+
+- So, for example, a 20Hz wave would need to be sampled no less than 40 times per second.
+
+--
+
+- A 20,000Hz wave would need to be sampled no less than 40,000 times per second.
+
+--
+
+- If you recall, human hearing falls into the range of 20 - 20kHz.
+
+--
+
+- So the max sample rate a sound humans can hear would need would be about 40,000 samples per second.
+
+--
+
+- It will therefore not surprise you to learn that **[44.1kHz](https://en.wikipedia.org/wiki/44%2C100_Hz)** is a common sample rate for digital audio, with 96kHz currently considered very high resolution.
+
+---
+
+template: analog-vs-digital
+
+## Bit depth
+
+In addition to sample rate, another factor in the faithful reproduction of an analog audio signal is the bit depth.
+
+--
+
+- **Bit depth** refers to how many bits of data are used to represent each sample.
+
+--
+
+- For example, a bit depth of 2 bits per sample would allow one of 2<sup>2</sup> = 4 different values in any given sample.
+
+--
+
+- A bit depth of 16 bits per sample would allow one of 2<sup>16</sup> = 65536 different values in each sample. etc.
+
+--
+
+- Today, 32 bits per sample is considered high quality.
+
+---
+
+template: analog-vs-digital
+
+## Bit depth (continued)
+
+Fitting the amplitude of the analog signal into the available bit depth of a sample is termed **quantization**.
+
+--
+
+- Higher bit depths allow a more faithful reproduction of the original analog signal.
+
+--
+
+![Bit depth](../images/audio_bit_depth.png)
+
+---
+
+name: audacity
+
+# Audacity
+
+--
+
+## Audio recording software
+
+**[Audacity](https://www.audacityteam.org/)** is a free, cross-platform, open source multi-track audio recording software.
+
+--
+
+- Audacity allows you to record and manipulate audio data down to the level of an individual sample.
+
+---
+
+template: audacity
+
+## The lame MP3 format
+
+While editing audio tracks, Audacity and other multi-track audio tools, will save in their own proprietary "layered" formats.
+
+--
+
+- However, most people prefer to share audio tracks in flat **MP3** format, which are playable on most computers and devices.
+
+--
+
+- In order to export as MP3, a proprietary _non-free_ format, Audacity includes an MP3 encoding tool called **LAME**.
+
+--
+
+- The LAME project has created from scratch a clone of an MP3 encoder much the same way that GNU created from scratch a clone of the UNIX operating system.
+
+--
+
+- LAME is a recursive acronym that stands for, "_LAME Ain't an MP3 Encoder_", in clear homage to GNU.
+
+---
+
+template: audacity
+
+## MacOS Catalina (10.15) problems
+
+Audacity currently will not be able to record audio if run on Mac's Catalina OS (OSX 10.15). Fortunately, there is an easy workaround.
+
+--
+
+- Download Audacity and place it into your `Applications` folder.
+
+--
+
+- Place the following code into a text file named `audacity.command` stored somewhere convenient, such as your `Desktop`.
+
+```bash
+#!/usr/bin/env bash
+
+# open Audacity from bash... otherwise it doesn't work on Mac Catalina
+open /Applications/Audacity.app/Contents/MacOS/Audacity
+```
+
+--
+
+- Give everyone execute permissions on this file from the command line:
+
+```bash
+chmod a+x audacity.command
+```
+
+--
+
+- Whenever you want to launch Audacity, just double click this `audacity.command` file, rather than launching Audacity directly.
+
+---
+
+name: conclusions
+
+# Conclusions
+
+--
+
+We have now seen some of the conceptual details of how audio is stored and manipulated in a contemporary computer.
+
+--
+
+- An early 1980's television show named Bits and Bytes explained many of the concepts of digital audio very well in their [episode on Computer Music](https://www.youtube.com/watch?v=Ho8niBS1nrU). While hardware may have evolved since that time, the fundamental concepts behind digital audio have not.
+
+--
+
+- There are many Audacity tutorials available online, such as [this one](https://www.youtube.com/watch?v=aCisC3sHneM).
+
+--
+
+- Thank you. Bye.

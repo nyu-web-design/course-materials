@@ -1,0 +1,544 @@
+---
+layout: presentation
+title: Intro to CSS
+permalink: /css/
+---
+
+class: center, middle
+
+# Intro to Cascading Style Sheets
+
+styling the content of a web page
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Separation of Concerns](#separation)
+1. [Setup](#setup)
+1. [Selectors](#selectors)
+1. [Rules](#rules)
+1. [More Selectors](#more-selectors)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+---
+
+template: overview
+name: overview-1
+
+Cascading Style Sheets (CSS) is used to indicate the visual presentation of the content on a web page.
+
+- What color(s) each element should be
+- What font should be used
+- The position of each element on the page
+- The spacing between elements
+- etc
+
+---
+
+name: separation
+
+# Separation of Concerns
+
+---
+
+template: separation
+name: separation-1
+
+The **separation of concerns** is a philosophy popular in technology that different tasks should be accomplished by different technologis. With regards the Web:
+
+- The semantic content should be controlled by Hypertext Markup Language (HTML)
+- The visual presentation of content should be controlled by Cascading Style Sheets (CSS)
+- The interactive behavior of content should be controlled by Javascript (JS)
+
+---
+
+name: setup
+
+# Setup
+
+---
+
+template: setup
+name: setup-1
+
+## Including CSS into an HTML document
+
+There are three ways that stylsheets can be included into an HTML document:
+
+- external stylesheet file
+- internal style element
+- inline style attribute
+
+---
+
+template: setup
+name: setup-2
+
+## External stylesheet file
+
+The **preferred** method. Put style sheet code in a separate file and link to that file from the HTML document.
+
+- place CSS files into a subdirectory named `css`.
+
+A `link` element should be nested within the `head` element of your HTML document.
+
+```html
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    ...
+  </head>
+  ...
+</html>
+```
+
+---
+
+template: setup
+name: setup-2b
+
+## External stylesheet file (continued)
+
+Now you can write CSS code into that separate file and it will be applied to the content in the HTML document.
+
+```css
+p {
+  background-color: pink;
+}
+```
+
+---
+
+template: setup
+name: setup-3
+
+## Internal style element
+
+A **discouraged** method. Put style sheet code into a `style` element within the HTML document.
+
+A `style` element should be nested within the `head` element of your HTML document.
+
+```html
+<html lang="en">
+  <head>
+    <style>
+      p {
+        background-color: pink;
+      }
+      ...;
+    </style>
+    ...
+  </head>
+</html>
+```
+
+---
+
+template: setup
+name: setup-4
+
+## Inline style attribute
+
+A **discouraged** method. Put style sheet code into a `style` attribute inside any HTML tag.
+
+- There is no need for selectors when using this method.
+
+This attribute would be added to any elements within the `body` of the document.
+
+```html
+<html lang="en">
+  ...
+  <body>
+    <p style="background-color: pink;">
+      Lorem ipsum dolor sit amet
+    </p>
+    ...
+  </body>
+</html>
+```
+
+---
+
+name: selectors
+
+# Selectors
+
+---
+
+template: selectors
+name: selectors-1
+
+## Concept
+
+Out of all the elements on a page, a selector picks those that will be styled by a given block of code.
+
+For example, the following code selects for any and all `p` paragraph elements on the page and gives them a blue font color.
+
+- The `p` is the 'selector', `color: blue;` is a 'rule'.
+
+```css
+p {
+  color: blue;
+}
+```
+
+---
+
+template: selectors
+name: selectors-2
+
+## Selecting by tag name
+
+Selectors can select by tag name:
+
+Select all `p` elements and make the text within blue.
+
+```css
+p {
+  color: blue;
+}
+```
+
+Select all `img` elements and make the text within blue.
+
+```css
+img {
+  width: 200px;
+  height: 200px;
+}
+```
+
+---
+
+template: selectors
+name: selectors-3
+
+## Selecting by id attribute
+
+Selectors can select by a _unique_ identifier optionally given to a particular element:
+
+- HTML `id` attribute values must be unique - no two elements can share the same `id` value.
+
+For example, given the following HTML code:
+
+```html
+<img id="donkey" src="images/donkey.jpg" />
+```
+
+---
+
+template: selectors
+name: selectors-3a
+
+## Selecting by id attribute (continued)
+
+The following CSS code would select for just this one `donkey` image.
+
+```css
+img#donkey {
+  width: 200px;
+  height: 200px;
+}
+```
+
+This can be rewritten to select for an element of any type with the id `donkey`.
+
+```css
+#donkey {
+  width: 200px;
+  height: 200px;
+}
+```
+
+---
+
+template: selectors
+name: selectors-4
+
+## Selecting by class attribute
+
+Selectors can select by a _non-unique_ `class` optionally given to particular elements:
+
+- HTML `class` attribute values _need not be unique_, but they can be if applied to only one element.
+
+For example, given the following HTML code:
+
+```html
+<ul>
+  <li class="odd">Tomatoes</li>
+  <li class="even">Bananas</li>
+  <li class="odd">Yuccas</li>
+  <li class="even">Beets</li>
+</ul>
+```
+
+---
+
+template: selectors
+name: selectors-4a
+
+## Selecting by class attribute (continued)
+
+The following CSS code would select for only the `even` list items.
+
+```css
+li.even {
+  background-color: pink;
+}
+```
+
+This can be rewritten to select for elements of any type with the class `even`.
+
+```css
+.even {
+  background-color: pink;
+}
+```
+
+---
+
+name: rules
+
+# Rules
+
+---
+
+template: rules
+name: rules-1
+
+## Concept
+
+Rules are changes to a style property, applied to whichever element(s) have been selected.
+
+- Each rule indicates the name of a property to be changed, and the new value to assign to it.
+
+For example, the following CSS code contains three rules necessary to control the border of an element.
+
+```css
+header {
+  /* the following three lines are rules */
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+```
+
+---
+
+template: rules
+name: rules-2
+
+## Changing color
+
+There are several properties related to color changes, including:
+
+- `color` - the text color applied to text within the selected element(s)
+- `background-color` - background color applied to the entire area of the selected element(s)
+- `border-color` - the color of any border applied to the selected element(s)
+
+--
+
+Example:
+
+```css
+footer {
+  color: black;
+  background-color: #c0c0c0;
+  border-color: blue;
+  /* the other two border-related properties are necessary to show a border */
+  border-width: 2px;
+  border-style: dotted;
+}
+```
+
+---
+
+template: rules
+name: rules-3
+
+## Changing text
+
+There are several properties related to text or font changes, including:
+
+- `color` - the text color applied to text within the selected element(s)
+- `font-family` - the font to be used for any text within the selected element(s)
+- `font-size` - the size of the text can be specified in a variety of units (pt, px, etc)
+- `text-decoration` - used to apply any `underline` or `overline` to the selected text
+- `font-weight` - whether text is `bold`, `normal`, or `light`
+
+--
+
+Example:
+
+```css
+p#first {
+  color: purple;
+  font-family: helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+---
+
+template: rules
+name: rules-4
+
+## Changing sizing and spacing
+
+There are a few properties related to text or font changes, including:
+
+- `width` - the width of an element
+- `height` - the height of an element
+- `margin` - the spacing _external_ to an element
+- `padding` - the spacing _internal_ to an element
+
+--
+
+Example:
+
+```css
+aside {
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  height: 600px; /* as a general rule, don't set the height of an element like this... let the height auto-adjust to fit the content within the element */
+}
+```
+
+---
+
+template: rules
+name: rules-5
+
+## More rules
+
+There are many more properties to style... once you get the hang of the basic style properties we've discussed, learn some more.
+
+- Try the [W3Schools.com CSS Tutorial](https://www.w3schools.com/css/default.asp)
+
+---
+
+name: more-selectors
+
+# More Selectors
+
+---
+
+template: more-selectors
+name: more-selectors-1
+
+## Compound selectors
+
+The following will apply the same set of rules to both `header` and `footer` elements:
+
+- Note the use of the comma - `,`.
+
+```css
+header,
+footer {
+  background-color: #00ff00;
+}
+```
+
+Here's another example with a mix of different kinds of selectors:
+
+```css
+section#first,
+aside.nonesense,
+p {
+  background-color: #00ff00;
+}
+```
+
+---
+
+template: more-selectors
+name: more-selectors-2
+
+## Nesting selectors
+
+The following will apply the rules to any `p` paragraph element within an `article` element.
+
+- Note the use of the space.
+- Note that `article` elements do not have their styles changed by this.
+
+```css
+article p {
+  background-color: #00ff00;
+}
+```
+
+Another example with a mix of different selector types:
+
+```css
+article#featured p.green {
+  background-color: #00ff00;
+}
+```
+
+---
+
+template: more-selectors
+name: more-selectors-3
+
+## Direct descendent selectors
+
+Given the following HTML code:
+
+```html
+<article class="featured">
+  <h2>Something Important</h2>
+  <p>Lorem ipsum dolor sit amet....</p>
+  <aside>
+    <h3>A Side Note</h3>
+    <p>Twas brillig and the slithy toves...</p>
+  </aside>
+</article>
+
+<article>
+  <h2>Something Else</h2>
+  <p>Lorem ipsum dolor sit amet....</p>
+</article>
+```
+
+---
+
+template: more-selectors
+name: more-selectors-3a
+
+## Direct descendent selectors (continued)
+
+The following CSS selector would only select the `p` paragraph that is nested directly within the `article` with the class `featured`, not any other paragraph.
+
+- Note the use of the greater than sign, `>`.
+
+```css
+article.featured > p {
+  background-color: #00ff00;
+}
+```
+
+---
+
+name: conclusions
+
+# Conclusions
+
+---
+
+template: conclusions
+name: conclusions-1
+
+You now have a basic understanding of the purpose of CSS, its syntax, and some of the common selectors and rules.
+
+- Thank you. Bye.

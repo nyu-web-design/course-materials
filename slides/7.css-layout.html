@@ -1,0 +1,392 @@
+---
+layout: presentation
+title: CSS Web Page Layout
+permalink: /css-layout/
+---
+
+class: center, middle
+
+# Web Page Layout With Cascading Style Sheets
+
+laying out the content of a web page
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Container Elements](#containers)
+1. [Calculating Widths](#widths)
+1. [Block vs. Inline Elements](#display)
+1. [A Word About Divs and Spans](#divs-spans)
+1. [Position](#position)
+1. [Float and Clear](#float-clear)
+1. [Examples](#examples)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+---
+
+template: overview
+name: overview-1
+
+The layout of a web page is controlled by a few simple CSS concepts and rules. In order to get it right, we need to understand a few preliminary concepts.
+
+---
+
+name: containers
+
+# Containers
+
+---
+
+template: containers
+name: containers-1
+
+## The HTML
+
+To center the contents of a web page and to restrict the width of the page, we wrap the entire contents of the paage within a **container** or **wrapper** element.
+
+```html
+...
+<body>
+  <div class="container">
+    <!-- put the contents of your page within this element -->
+  </div>
+</body>
+...
+```
+
+---
+
+template: containers
+name: containers-2
+
+## Restrict the page width
+
+Now, we can easily restrict the page width to whatever width we like by adjusting this container's width.
+
+```css
+.container {
+  width: 800px; /* you choose the width */
+}
+```
+
+---
+
+template: containers
+name: containers-2
+
+## Center the contents
+
+We can also easily center the entire page within the browser's _viewport_ using margins.
+
+```css
+.container {
+  width: 800px; /* container width must be smaller than the browser viewport width */
+  /* equal margins on the left and right side of the containere */
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+---
+
+template: containers
+name: containers-3
+
+## Warning: avoid setting heights
+
+The height of the container, or any element for that matter, will always automatically adjust to fit the height of the contents you put within it.
+
+If you were to set the height of an element to a fixed size, yet place more content nested within that element than can fit in that size, your layout would become corrupted.
+
+---
+
+name: widths
+
+# Calculating Widths
+
+---
+
+template: widths
+name: widths-1
+
+## The question
+
+The width of an element can be a bit counter-intuitive to calculate.
+
+Take this HTML:
+
+```html
+<article class="boxy">...</article>
+```
+
+And this CSS:
+
+```css
+.boxy {
+  width: 400px;
+  border: 1px solid red;
+  padding: 20px;
+  margin: 10px;
+  background-color: pink;
+}
+```
+
+What's the width of the `article` element?
+
+---
+
+template: widths
+name: widths-2
+
+## An answer
+
+The actual width of an element includes:
+
+- the _width_ of the element!
+- any _border_ applied to either side of it
+- any _padding_ applied to either side of it
+
+```
+actual width = width + left border + right border + left padding + right padding
+```
+
+---
+
+template: widths
+name: widths-3
+
+## Another answer
+
+The space consumed by an element also includes:
+
+- any _margin_ applied to either side of it
+
+```
+actual width = width + left border + right border + left padding + right padding + left margin + right margin
+```
+
+---
+
+name: block-inline
+
+# Block vs. Inline Elements
+
+---
+
+template: block-inline
+name: block-inline-1
+
+## Concept
+
+Layout behavior of HTML elements is largely determined by the value of their CSS `display` property, which is one of three values.
+
+...
+
+```css
+display: block;
+```
+
+```css
+display: inline;
+```
+
+```css
+display: none;
+```
+
+...
+
+(In actuality there are other more specialized values for `display`, but we can safely ignore those for this discussion.)
+
+---
+
+template: block-inline
+name: block-inline-2
+
+## Common block elements
+
+The `display` property is set to `block` for many elements, including:
+
+- header
+- footer
+- main
+- aside
+- article
+- section
+- h1 - h6
+- p
+- ul and ol
+- li
+- div
+- ... and more
+
+---
+
+template: block-inline
+name: block-inline-3
+
+## Block element behavior
+
+The `block` value will cause the elements to have the following behavior:
+
+- consume as much width as they can within their containing element
+- refuse to sit side-by-side with other elements
+
+---
+
+template: block-inline
+name: block-inline-4
+
+## Common inline elements
+
+The `display` property is set to `inline` for many text-related elements and images, including:
+
+- a
+- strong
+- em
+- img
+- span
+- ... and more
+
+---
+
+template: block-inline
+name: block-inline-5
+
+## Inline element behavior
+
+The `inline` value will cause the elements to have the following behavior:
+
+- consume only as much width as they need to surround the contents nested within them.
+- happily sit side-by-side with other elements.
+
+---
+
+template: block-inline
+name: block-inline-6
+
+## Effects
+
+The block/inline difference means that...
+
+- we cannot set the widths of inline elements
+- we also cannot set the left or right padding of inline elements
+- we must use `block` elements to build the structure or skeleton of our web pages
+- we will have to do extra work to get block elements to sit side-by-side
+- inline elements will be used only to style bits of text and images.
+
+---
+
+name: divs-spans
+
+# A Word About Divs and Spans
+
+---
+
+template: divs-spans
+name: divs-spans-1
+
+## Concept
+
+There are two elements we will frequently use that have no semantic meaning:
+
+- `div` - a `block` element with no semantic meaning
+- `span` - an `inline` element with no semantic meaning
+
+These are useful when you want to surround some content that you want to apply a style to, but you don't want to adjust that content's semantic meaning.
+
+- So much for the much-touted _separation of concerns_!
+
+---
+
+name: position
+
+# Position
+
+---
+
+template: position
+name: position-1
+
+## Positioning using the CSS position property
+
+It is sometimes tempting to use the CSS position property to position elements on the page... it sounds like this is what the property is intended for.
+
+The CSS `position` property can take three values:
+
+- `static` - keep the element at its default position on the page
+- `relative` - allows us to move the element from its static position by a particular number of pixels in the `top` or `left` directions
+- `absolute` - allows us to absolutely position an element relative to the top-left corner of the page
+- `fixed` - allows us to have an element stuck in the browser viewport at a specific position relative to the top-left corner of the viewport.
+
+---
+
+template: position
+name: position-2
+
+## Do not use these for general web page layout.
+
+These `position` values are useful in some specific advanced contexts, but should never be used to layout the positions of all the main parts of a web page.
+
+- They make a site difficult to design and maintain.
+
+You have now been warned. Don't use them.
+
+---
+
+name: float-clear
+
+# Float and Clear
+
+---
+
+template: float-clear
+name: float-clear-1
+
+## The secret to web layout
+
+All layouts can be achieved with a few simple rules.
+
+- Use `block` elements for the _structure_ or _skeleton_ of the layout.
+- All `block` elements that must sit side-by-side with other elements must be given the `float: left` property
+- Immediately after the last `float: left` element in the side-by-side row, put an invisibe `div` element with the style `clear: both`.
+
+Now you can make any layout you wish for.
+
+---
+
+name: examples
+
+# Examples
+
+---
+
+template: examples
+name: examples-1
+
+## Try them out
+
+Review the code behind some of [the most common web page layouts](https://knowledge.kitchen/Common_Web_Page_Layouts_in_HTML_and_CSS).
+
+---
+
+name: conclusions
+
+# Conclusions
+
+---
+
+template: conclusions
+name: conclusions-1
+
+At this point you have a solid understanding of the key concepts behind web page layout. You must _try it yourself_ to really understand how to apply it.
+
+- Thank you. Bye.

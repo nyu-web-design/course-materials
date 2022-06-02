@@ -1,0 +1,420 @@
+---
+layout: presentation
+title: Digital Imagery
+permalink: /digital-imagery/
+---
+
+class: center, middle
+
+# Digital Imagery
+
+the practicality of producing images on and for a computer
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Raster Images](#raster)
+1. [Vector Images](#vector)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+--
+
+## Concept
+
+The way in which a typical computer stores and manipulates image data is interesting from a conceptual standpoint as well as from a practical position.
+
+--
+
+- After text data, which is stored as numeric ASCII or Unicode codes, image data is perhaps the second-most-common type of data stored on computers.
+
+--
+
+- Producing images that are well-designed requires an understanding of the data structures used to represent images as well as some of the inherent capabilities of the media upon which they will be displayed.
+
+---
+
+template: overview
+
+## Data structures
+
+When it comes to digital images, there are two categories of data structures that are used to represent the image data.
+
+--
+
+- A **data structure** is the internal way the computer organizes the data in memory.
+
+--
+
+- As we'll see, each data structure lends itself to certain kinds of media and not others.
+
+--
+
+- **Raster images** are stored as sort of grid or "dot matrix" of solid-colored **pixels** that, when viewed together, produce the image.
+
+--
+
+- **Vector images** store formulae for the **lines** and **curves** necessary to redraw the image, and their associated **styles**.
+
+---
+
+name: raster
+
+# Raster Images
+
+---
+
+template: raster
+
+## Example
+
+Imagine an image of a simple rectangle:
+
+![Rendered rectangle](../images/digital-imagery-rendered-rectangle.png)
+
+---
+
+template: raster
+
+## Example (continued)
+
+A **raster image** (also known as a bitmap image) would divide this image into a dot matrix grid and store information about the solid color at each grid point.
+
+--
+
+- Here is a zoomed-in visualization of a dot matrix grid for just the corner.
+
+![Raster rectangle](../images/digital-imagery-raster-rectangle.png)
+
+--
+
+name: raster-structure
+
+- The data structure would hold the exact color codes for each pixel, row-by-row, column-by-column.
+
+---
+
+template: raster
+
+## Digital cameras
+
+Digital cameras capture the amount of light falling onto a grid of light sensors behind the camera lens.
+
+--
+
+- The sensor grid records the discrete color of light hitting each sensor in the row/column grid.
+
+--
+
+- Thus a raster image data structure lends itself conveniently to the way in which images are actually recorded by digital cameras.
+
+---
+
+template: raster
+
+## Computer displays
+
+Almost all computer displays today contain a grid of lamps that produce the image you see.
+
+--
+
+- The lamp within each grid position of the display produces light of a single solid color.
+
+--
+
+- Thus a raster image data structure lends itself conveniently to the way in which images are actually displayed on computers.
+
+--
+
+- The computer must simply scan each row of raster data, extract the code for the color in each column within that row, and send that solid color data to the display at the same row and column position.
+
+---
+
+template: raster
+
+## Printed materials
+
+Computer printers, including dot matrix printers, inkjet printers, and laser printers, print image data to paper and other materials.
+
+--
+
+- The ink is printed to the paper in a dot matrix - a grid. The printer head scans the page and places tiny droplets of ink (the **dots**) on the paper in a grid of rows and columns.
+
+--
+
+- This grid is so small and tightly packed in a high-quality printer that you typically do not discern it with the naked eye, although you certainly can on lower-quality or older printers.
+
+--
+
+- Thus a raster image data structure lends itself conveniently to the way in which images are actually printed to paper.
+
+---
+
+template: raster
+
+## Features
+
+There are a few key features that influence the quality, display size, and file size of any raster image.
+
+--
+
+- **Dimensions** - how many pixels wide and tall is the image.
+
+--
+
+- **Resolution** - when a raster image is displayed or printed - whether on a computer dispay or on printed material, respectively - the number of pixels (or dots) displayed (or printed) per inch.
+
+--
+
+- **Bit depth** - how many bits are available for the numeric codes used to represent the color of each pixel.
+
+---
+
+template: raster
+
+## Attention to detail
+
+When shopping for a computer, you always see advertisements like this:
+
+![False advertising of resolution](../images/digital-imagery-false-advertising.png)
+
+--
+
+- These are pixel dimensions, not resolution! The field of marketing...
+
+---
+
+template: raster
+
+## Compression formats
+
+When it comes to saving raster image data into a usable file, there are a few considerations.
+
+--
+
+- **File size** - the larger the file, the more storage space it consumes, the more data needs to be transferred over a network like the Internet to download it, and the longer a user of an application like The Web must wait for it to appear on the screen.
+
+--
+
+- **Fidelity** - how faithfully does the data in the file reproduce the original image it was meant to capture?
+
+--
+
+- These two considerations are often [at loggerheads](https://www.merriam-webster.com/dictionary/loggerhead) with one another. Usually, _a compromise must be found_.
+
+---
+
+template: raster
+
+## Compression formats
+
+A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
+
+--
+
+- **GIF** - good for compressing the file sizes of _simple images with lots of solid color areas_, i.e. pixels whose color is similar to that of their neighboring pixels.
+
+--
+
+- only supports up to 256 different colors (i.e., 8-bit color depth)
+
+--
+
+- best for simple graphics like clip art, cartoons, diagrams, and other simple illustrations.
+
+--
+
+- supports transparency
+
+--
+
+- ... and animation
+
+---
+
+template: raster
+
+## Compression formats
+
+A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
+
+- **JPG** - good for compressing the file sizes of _photorealistic images_ where each pixel is likely to have a very different color from its neighboring pixels.
+
+--
+
+- supports millions of colors
+
+--
+
+- best for photographs and illustrations with a high degree of variation in colors from pixel-to-pixel.
+
+--
+
+- cannot handle transparency
+
+---
+
+template: raster
+
+## Compression formats
+
+A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
+
+- **PNG** - good _general-purpose_ compression for raster images of all types.
+
+--
+
+- supports unlimited colors
+
+--
+
+- good for all kinds of images
+
+--
+
+- supports transparency
+
+--
+
+- ... and animation (in theory, but not in practice - the web browsers do not currently support animated PNGs)
+
+---
+
+template: raster
+
+## Drawbacks
+
+While raster images lend themselves to digital cameras, computer displays, and printers, there are some reasons why they are not perfect for all images.
+
+--
+
+- **Enlarging a raster image reduces its quality** - each virtual pixel becomes larger, and the fact that the image is made of tiny dots of solid color becomes visible to the naked eye.
+
+--
+
+- **Raster images do not retain any information about the shapes that the pixels represent**. This makes modifying shapes in the image more difficult - they must be entirely redone from scratch, making raster images unsuitable for drafting illustrations or diagrams.
+
+---
+
+name: vector
+
+# Vector Images
+
+---
+
+template: vector
+
+## Example
+
+Take the same image of the rectangle we saw earlier...
+
+![Rendered rectangle](../images/digital-imagery-rendered-rectangle.png)
+
+---
+
+template: vector
+
+## Example (continued)
+
+A **vector image** would store just the fact that there is a rectangular shape with a particular width, height, stroke color, and fill color.
+
+--
+
+name: vector-example-code
+
+- Here is one way of representing this vector shape data as text:
+
+```html
+<rect class="cls-1" width="130" height="90" />
+```
+
+--
+
+- And its associated styles:
+
+```css
+<style>
+        .cls-1{
+                fill: #f69799;
+                stroke: #b5739d;
+                stroke-width: 10px;
+        }
+</style>
+```
+
+--
+
+- [Compare this](#raster-structure) to how the same image data would have been structured in a raster image
+
+---
+
+template: vector
+
+## Benefits
+
+Vector imagery offers advantages in some use-cases, compared to raster imagery.
+
+--
+
+- **Enlarging a vector image does not result in any loss of quality**. For example, we could simply adjust the `width` and `height` properties of the `rect` in the previous [example code](#vector-example-code).
+
+--
+
+- **Vector images retain all information about the shapes and styles represented in the image**. This makes modifying any shapes in the image as simple as tweaking its settings.
+
+---
+
+template: vector
+
+## Applications
+
+Vector images are widely used in specific contexts.
+
+--
+
+- **Illustration and graphic design** - illustrators continually draw and style lines, curves, and other shapes that naturally lend themselves to vector image data structures.
+
+--
+
+- **Fabrication** - laser printers, CNC mills, 3D printers, and other fabrication devices often shape physical materials by running a laser, router bit, or printer head along predefined paths easily represented as vector shapes.
+
+--
+
+- **3D imagery** - virtually all contemporary 3D image design and rendering is done using extensions to 2D vector graphic techniques.
+
+---
+
+template: vector
+
+## File formats
+
+There are many popular specialized vector image files for specific applications.
+
+--
+
+- **Scalable Vector Graphics (SVG)** - simple text files that store vector data
+
+  - written as plain text markup, similar to HTML
+  - styled with CSS code
+  - supported by most contemporary web browsers
+
+---
+
+name: conclusions
+
+# Conclusions
+
+--
+
+This presentation has hopefully given you a useful overview of image theory as it applies to producing images on and for a computer.
+
+--
+
+- Thank you. Bye.

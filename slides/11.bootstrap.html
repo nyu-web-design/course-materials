@@ -1,0 +1,409 @@
+---
+layout: presentation
+title: The Bootstrap Front-End Framework
+permalink: /bootstrap/
+---
+
+class: center, middle
+
+# The Bootstrap Front-End Framework
+
+easy responsive design for the masses
+
+---
+
+# Agenda
+
+1. [Front-End Frameworks](#frameworks)
+1. [Boostrap Overview](#overview)
+1. [CSS Reset](#css-reset)
+1. [New Baseline CSS Styles](#baseline-css)
+1. [Responsive Design](#responsive-design)
+1. [Grid Layout System](#grid-system)
+1. [Readymade Javascript Code](#javascript)
+1. [Conclusions](#conclusions)
+
+---
+
+name: frameworks
+
+# Front-End Frameworks
+
+--
+
+## Concept
+
+Front-end frameworks, of which Bootstrap is one, are toolkits that _help web developers create the front-end_ - the visible user interfaces of web pages and applications.
+
+--
+
+- They do so by offering many _readymade user interface components_ (written in HTML + CSS) and _readymade behaviors_ (written in Javascript) that the web developer can pick and choose from when adding them to their own pages.
+
+--
+
+- They are generally created in such a way that the _web designer need not know how they work_, but simply must know how to integrate them into the page properly.
+
+--
+
+- The most successful front-end frameworks are those that offer the most commonly-used styles and UI components as readymades and are easiest to incorporate into a developer's own code.
+
+---
+
+name: overview
+
+# Boostrap Overview
+
+--
+
+## Evolution
+
+[Bootstrap](https://getbootstrap.com) was originally created by two developers at Twitter in 2010 as a sort of style guide for internal projects
+
+--
+
+- Today, it is maintained by an ever-changing group of **volunteer developers** self-selected from the open source community.
+
+--
+
+- It is currently **the most widely used front-end web framework**, although there is no reliable way to measure such statistics.
+
+--
+
+- Bootstrap is given away free under a **copyleft** copyright license.
+
+---
+
+template: overview
+
+## Concept
+
+Bootstrap is a free collection of code for simplifying the creation of websites and web applications. It contains ...
+
+--
+
+- **a CSS reset** - a complete override of the browsers' built-in style sheets to make the styles start from a more contemporary baseline.
+
+--
+
+- **new baseline CSS styles** for typography, links, form elements, buttons, lists, navigation bars, thumbnail images, and other styled interface elements.
+
+--
+
+- readymade CSS code with media queries to implement a combination of a mixed **breakpoint-based and scaling responsive design**.
+
+--
+
+- a **grid layout system**, where interface components are easily positioned in a row/column system and sized with minimal code.
+
+--
+
+- some **readymade JavaScript code** for a few UI components with interactive behaviors, such as drop-down menus, image carousels, tooltips, and more.
+
+---
+
+name: installation
+
+# Installation
+
+--
+
+## Project setup
+
+Since Bootstrap consists of CSS and Javascript code, it is necessary to simply link them to a project's HTML documents.
+
+--
+
+- Bootstrap's code files can be downloaded from [the Bootstrap official website](https://getbootstrap.com) and placed into a project's own directories.
+
+--
+
+- There are several download options. Select the production-ready _minified_ or _compressed_ code - all unnecessary fluff has been removed.
+
+--
+
+- Once downloaded, add a `link` element to your HTML `head` element to link to the CSS file, and a `script` element to link to the Bootstrap Javascript file.
+
+```html
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+```
+
+--
+
+- You will notice that the code above assumes you have saved the CSS and Javascript files into your project's `css` and `js` directories, respectively.
+
+---
+
+template: installation
+
+## Project setup (continued)
+
+You may have noticed that the example code links to the [JQuery](https://jquery.com) Javascript file
+
+--
+
+- Bootstrap's Javascript code depends upon JQuery's code, which must be loaded first.
+
+--
+
+- You must download the JQuery file separately from the JQuery web site and place it into the appropriate directory.
+
+---
+
+template: installation
+
+## Alternative
+
+Rather than download the Bootstrap and JQuery files into your own project directories, you can load them from a Content Deliver Network's (CDN) servers offered for free by both projects.
+
+--
+
+- A CDN is a cloud-based hosting environment, where a request for files is directed to the nearest data center.
+
+--
+
+- A nearby data center makes for a faster download time. A faster download time makes for a happier user.
+
+--
+
+- Using an externally-hosted set of files also reduces the amount of bandwidth that your web servers will have to handle, potentially reducing costs.
+
+--
+
+- To use the CDN-hosted files, link to them on the CDN servers rather than on your project's own file system. [Read more](https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn)
+
+---
+
+template: installation
+
+## Customization
+
+While Bootstrap's new CSS styles and Javascript-enhanced interface components are useful and save time, you will inevitably want to customize some of the CSS styles and Javascript behaviors of your web pages.
+
+--
+
+- Never modify the contents of the Bootstrap or JQuery files - they are very well-written and you are very likely to wreck them.
+
+--
+
+- _After_ the links to the Bootsrap and JQuery files in the code, add links to your own custom files.
+
+```html
+<link rel="stylesheeet" type="text/css" href="css/custom.css" />
+<script type="text/javascript" src="js/custom.js"></script>
+```
+
+--
+
+- Write your own CSS and Javascript code in these two files, _not_ in the Bootstrap or JQuery files.
+
+---
+
+name: css-reset
+
+# CSS Reset
+
+--
+
+## Concept
+
+A **CSS reset** is a set of CSS code that removes or overrides the default CSS stylesheets used by web browsers.
+
+--
+
+- Web browsers come with defaul styles for all HTML elements.
+
+--
+
+- For example, most browsers use the font, `Times`, for all text by default, include a large left margin for all list items, top and bottom margins for paragraphs, a gray gradient with rounded corners for buttons, and so on.
+
+--
+
+- Most designers find the browser defaults to be out-of-date, at best, or in the way, at worst. Significant effort is spent overriding them for every project.
+
+--
+
+- A CSS reset takes care of overriding the browser's default styles for all HTML elements and replacing them with styles that are either easier to override or require less overriding.
+
+---
+
+name: baseline-css
+
+# New Baseline CSS Styles
+
+--
+
+## Concept
+
+Bootstrap overrides the browser's default styles with a set of more contemporary CSS defaults that are easy for developers to customizee.
+
+--
+
+- For example, Bootstrap overrides the browsers' preferred default font, `Times`, and replaces it with a more popular `Helvetica`.
+
+--
+
+- Bootstrap overrides styles for buttons, making it easy to replace their dated gray gradient background with more vibrant colors.
+
+--
+
+- Bootstrap includes styles for images that makes it easy for devleopers to make them responsive.
+
+--
+
+- and much more... virtually all HTML components have been given a makeover in Bootstrap.
+
+---
+
+name: responsive-design
+
+# Responsive Design
+
+--
+
+## Concept
+
+Bootstrap's CSS code includes media queries to make a breakpoint-based responsive design at the following breakpoints:
+
+--
+
+- browser widths _>=1200px_ (so-called Extra Large Devices) will show a page width of 1200px
+
+--
+
+- browser widths _>=992_ (so-called Large Devices) will show a fixed page width of _960px_
+
+--
+
+- browser widths _>=768_ (so-called Medium Devices) will show a fixed page width of _720px_
+
+--
+
+- browser widths _>=576_ (so-called Small Devices) will show a fixed page width of _540px_
+
+--
+
+- browser widths _&lt;576_ (so-called Extra Small Devices) will show a scaling page width of _100%_ of the browser width
+
+---
+
+template: responsive-design
+
+## Usage
+
+To take advantage of Bootstrap's responsive design features, you must enclose all of your HTML content into a `div` element with the class `container`.
+
+--
+
+- Bootstrap's CSS code has styles for the class `container` which take care of the responsive resizing of the container element.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Link to Bootstrap and JQuery files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Link to your own custom CSS and Javascript files -->
+    <link rel="stylesheeet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>The page width is now responsive!</h1>
+    </div>
+  </body>
+</html>
+```
+
+---
+
+name: grid-system
+
+# Grid Layout System
+
+--
+
+## Concept
+
+Bootstrap makes it easy to place any element at a particular position on the page as well as to specify the size of that element at all responsive breakpoints.
+
+--
+
+- Bootstrap's code divides the page width into 12 columns.
+
+--
+
+- Your HTML code specifies how many columns you want any element to consume.
+
+--
+
+- Bootstrap's code sizes its width appropriately at all responsive breakpoints.
+
+---
+
+template: grid-system
+
+## Usage
+
+For example, the following code, if placed within the container `div` would create two articles each taking up 1/2 of the available width at all responsive breakpoints.
+
+```html
+<div class="row">
+  <article class="col-6">First article</article>
+  <article class="col-6">Second article</article>
+</div>
+```
+
+- We can specify different sizes at different responsive breakpoints. In this case, each article will take up full width at extra small and small devices, but 1/2 width at medium devices and larger.
+
+```html
+<div class="row">
+  <article class="col-12 col-md-6">First article</article>
+  <article class="col-12 col-md-6">Second article</article>
+</div>
+```
+
+---
+
+name: javascript
+
+# Readymade Javascript Code
+
+--
+
+## Concept
+
+Some common user interface components require Javascript code to implement.
+
+--
+
+- Bootstrap's readymade Javascript makes it such that developers with limited Javascript skill can implement these components.
+
+--
+
+- Even expert Javascript developers will often prefer to use readymade code rather than write it from scratch.
+
+--
+
+- Bootstrap's Javascript-enabled components include [image carousels](https://getbootstrap.com/docs/4.4/components/carousel/), [dropdown menus](https://getbootstrap.com/docs/4.4/components/dropdowns/), [collapsible components](https://getbootstrap.com/docs/4.4/components/collapse/), [tooltips](https://getbootstrap.com/docs/4.4/components/tooltips/), and more.
+
+--
+
+- As a general plan of action, copy the example Javascript-enabled component code _exactly_ as it is on the Bootstrap documentation, make sure it works when placed into your own pages, and only then try to customize.
+
+---
+
+name: conclusions
+
+# Conclusions
+
+--
+
+You have now seen the joy of the Bootstrap front-end framework.
+
+--
+
+- Thank you. Bye.
