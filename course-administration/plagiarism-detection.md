@@ -8,7 +8,7 @@ There are a variety of code similarity analysis tools. We recommend using [compa
 
 To analyze code similarity of any assignment:
 
-1. Assuming Python is already installed, install `compare50` by running the following command on the command line: `pip3 install -U compare50` or `pip install -U compare50`. See their documentation for further installation details.
+1. Assuming Python is already installed, install `compare50` by running the following command on the command line: `pip install -U compare50`. See their documentation for further installation details.
 1. Place all student submissions for an assignment into a single parent directory (note that this is how [GitHub Classroom Assistant](https://classroom.github.com/assistant), which we recommend using, already organizes student submissions).
 1. Place any given code into a sub-directory named `given-code` within this same parent directory.
 1. Open a command line tool (i.e. `Terminal` on Mac or [Git Bash](https://gitforwindows.org/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) on Windows) and navigate into the parent directory.
