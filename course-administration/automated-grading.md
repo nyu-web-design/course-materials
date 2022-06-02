@@ -29,7 +29,7 @@ To use these automated tests, do the following:
 
 1. Move the executable file you download to a directory that is already included in your system’s `PATH` variable. You can see which directories are on your system’s `PATH` by opening up a command line window (i.e. Terminal on Mac or `cmd` on Windows) and typing `echo $PATH` (Mac) or `echo %PATH%` (Windows). Mac users can most likely safely place the file into `/usr/local/bin`. Windows users can probably place it into `C:\Windows\system32`
 
-1. Install [Python](https://www.python.org/downloads/) if you don’t already have it, and then install [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html). You can install `pytest` from the command line by running `pip3 install -U pytest` or `pip install -U pytest`.
+1. Install [Python](https://www.python.org/downloads/) if you don’t already have it, and then install [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html). You can install `pytest` from the command line by running `pip install -U pytest`.
 
 1. Open a student's repository in [Visual Studio Code](https://code.visualstudio.com), open the integrated Terminal within VSCode, and run the command, `pytest`. This should show you how many tests passed and how many failed.
 
