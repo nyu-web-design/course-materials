@@ -1,3 +1,9 @@
+---
+layout: github
+title: Syllabus
+permalink: /syllabus
+---
+
 # Syllabus
 
 ## Course description
@@ -40,7 +46,7 @@ Help resources available to you are listed in order of “seriousness” of your
 
 ### FAQ
 
-Students are expected to consult the [[University Student Etiquette Frequently Asked Questions|Student FAQ]] prior to asking questions of the tutors, professor, or other students. This allows us to focus our time on questions of greater significance.
+Students are expected to consult the [Student FAQ](https://knowledge.kitchen/University_Student_Etiquette_Frequently_Asked_Questions) prior to asking questions of the tutors, professor, or other students. This allows us to focus our time on questions of greater significance.
 
 ### Messaging
 
@@ -87,7 +93,7 @@ The main computer lab to use for this class is the [LaGuardia Co-op](http://www.
 
 ### Saving your work in the lab
 
-You will be able to save your work in the ITS labs under your NYU Home Account and/or on your own flash drives. Although you can write to the hard disks of the machines in the labs, you cannot be sure that you will have access to the same machine the next time you enter the lab and the drives in the lab are frequently erased. A good option is to [[Transfer files to the i6 web server|upload your files online]] and download them as needed.
+You will be able to save your work in the ITS labs under your NYU Home Account and/or on your own flash drives. Although you can write to the hard disks of the machines in the labs, you cannot be sure that you will have access to the same machine the next time you enter the lab and the drives in the lab are frequently erased. A good option is to [upload your files online](https://knowledge.kitchen/Transfer_files_to_the_i6_web_server) and download them as needed.
 
 ## Assignments
 
@@ -96,7 +102,7 @@ You will be able to save your work in the ITS labs under your NYU Home Account a
 All assignments will be submitted by pushing code to GitHub.
 
 - we will cover how to push code to GitHub
-- unless you have good reason to do otherwise, follow best-practices for all [[Basic_computer_concepts#File_names|basic file names and file extensions]]
+- unless you have good reason to do otherwise, follow best-practices for all [basic file names and file extensions](https://knowledge.kitchen/Basic_computer_concepts#File_names)
 
 ### Late penalty
 

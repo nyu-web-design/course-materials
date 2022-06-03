@@ -1,7 +1,7 @@
 ---
 layout: presentation
 title: JQuery for Web Designers
-permalink: /jquery-intro/
+permalink: /slides/jquery-intro/
 ---
 
 class: center, middle
@@ -187,7 +187,7 @@ Create the custom Javascript file you linked to and add the following starter co
 $(function () {
   //everything else you put into this file goes below here
   //everything else you put into this file goes above here
-});
+})
 ```
 
 ---
@@ -215,7 +215,7 @@ And then detect clicks on this element in your custom Javascript code (placed be
 $("input#my_button").click(function () {
   //everything you want to have happen when the button is clicked goes below here
   //everything you want to have happen when the button is clicked goes above here
-});
+})
 ```
 
 ---
@@ -240,7 +240,7 @@ And then detect mouseover events on this element in your custom Javascript code 
 $("p#my_paragraph").mouseover(function () {
   //everything you want to have happen when the mouse goes over the paragraph goes below here
   //everything you want to have happen when the mouse goes over the paragraph goes above here
-});
+})
 ```
 
 ---
@@ -256,7 +256,7 @@ To detect mouseout events - when the user stops hovering over this element - in 
 $("p#my_paragraph").mouseout(function () {
   //everything you want to have happen when the mouse goes out of the paragraph goes below here
   //everything you want to have happen when the mouse goes out of the paragraph goes above here
-});
+})
 ```
 
 ---
@@ -272,7 +272,7 @@ To perform some change to the page after a certain period of time has passed, us
 setTimeout(function () {
   //everything you want to have happen after the specified time has passed goes below here
   //everything you want to have happen after the specified time has passed goes above here
-}, 2000); // 2000 represents 2 seconds (in milliseconds) ... adjust this number as needed
+}, 2000) // 2000 represents 2 seconds (in milliseconds) ... adjust this number as needed
 ```
 
 ---
@@ -297,13 +297,13 @@ Let's say you had an image of a donkey in the HTML.
 To hide this element, place this in the appropriate event handler code.
 
 ```javascript
-$("img#my_donkey").hide();
+$("img#my_donkey").hide()
 ```
 
 You can alternatively make an element gradually fade away.
 
 ```javascript
-$("img#my_donkey").fadeOut();
+$("img#my_donkey").fadeOut()
 ```
 
 ---
@@ -316,13 +316,13 @@ name: content-2
 To show an element that has been hidden, place this in the appropriate event handler code.
 
 ```javascript
-$("img#my_donkey").show();
+$("img#my_donkey").show()
 ```
 
 You can alternatively make an element gradually fade in.
 
 ```javascript
-$("img#my_donkey").fadeIn();
+$("img#my_donkey").fadeIn()
 ```
 
 ---
@@ -335,7 +335,7 @@ name: content-3
 To alter the text nested within an element...
 
 ```javascript
-$("p#my_paragraph").text("Tri-tip prosciutto drumstick swine");
+$("p#my_paragraph").text("Tri-tip prosciutto drumstick swine")
 ```
 
 You can alternatively write HTML that will be nested within the selected element
@@ -343,7 +343,7 @@ You can alternatively write HTML that will be nested within the selected element
 ```javascript
 $("p#my_paragraph").html(
   "<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine"
-);
+)
 ```
 
 ---
@@ -356,7 +356,7 @@ name: content-4
 Any CSS styles can be adjusted through Javascript code
 
 ```javascript
-$("p#my_paragraph").css("color", "green");
+$("p#my_paragraph").css("color", "green")
 ```
 
 Multiple styles can be changed at once:
@@ -366,7 +366,7 @@ $("p#my_paragraph").css({
   color: "green",
   "background-color": "blue",
   opacity: 0.5,
-});
+})
 ```
 
 ---
@@ -390,13 +390,13 @@ For example, assume the following CSS code:
 The following would add the `pretty` class to an element, which would apply the corresponding CSS styles.
 
 ```javascript
-$("p#my_paragraph").addClass("pretty");
+$("p#my_paragraph").addClass("pretty")
 ```
 
 Removing a class is equally easy.
 
 ```javascript
-$("p#my_paragraph").removeClass("pretty");
+$("p#my_paragraph").removeClass("pretty")
 ```
 
 ---
@@ -411,7 +411,7 @@ Any attribute of any HTML element can have its value changed.
 For example, to change the source image used by an `img` element.
 
 ```javascript
-$("img#my_donkey").attr("src", "images/mule.jpg");
+$("img#my_donkey").attr("src", "images/mule.jpg")
 ```
 
 This, of course, assumes you have an image named `mule.jpg` in the `images` directory.
@@ -429,7 +429,7 @@ For example, to move an element to near the top left of the browser viewport whi
 
 ```javascript
 // first make sure the element can be positioned before trying to change its position
-$("img#donkey").css("position", "absolute");
+$("img#donkey").css("position", "absolute")
 
 // now animate it!
 $("img#donkey").animate(
@@ -438,7 +438,7 @@ $("img#donkey").animate(
     left: "20px",
   },
   2000
-); // 2000 represents 2 seconds in milliseconds
+) // 2000 represents 2 seconds in milliseconds
 ```
 
 ---

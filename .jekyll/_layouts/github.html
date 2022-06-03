@@ -41,7 +41,7 @@
 
     <link
       rel="stylesheet"
-      href="/{{ site.github-org-name }}/assets/css/style.css?v=a375099dd8e64402de0f34e85ebf935268da1fb9"
+      href="{{ site.baseurl | strip_html }}/css/style.css"
     />
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
@@ -54,32 +54,38 @@
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
-      <h1>
-        <a href="{{ site.baseurl }} | strip_html }}">
-          {{ site.github-org-name }}
-        </a>
-      </h1>
+      <header>
+        <small>
+          <a href="{{ site.baseurl | strip_html }}/">
+            <!-- {{ site.github-org-name }} -->
+            {{ site.baseurl | strip_html }}
+          </a>
+        </small>
+      </header>
 
-      {{ page.content | markdownify }}
+      <main>{{ page.content | markdownify }}</main>
 
-      <h2 id="copyright">Copyright</h2>
+      <footer>
+        <h2 id="copyright">Copyright</h2>
 
-      <p>
-        All content herein is copyrighted, shared under the
-        <a href="/{{ site.baseurl }}/LICENSE"
-          >GNU General Public License, Version 3</a
-        >.
-      </p>
+        <p>
+          All content herein is copyrighted, shared under the
+          <a
+            href="https://github.com/{{ site.github-org-name }}/{{ site.github-repo-name }}/blob/main/LICENSE"
+            >{{ site.copyright }}</a
+          >.
+        </p>
 
-      <div
-        class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray"
-      >
-        This site is open source.
-        <a
-          href="https://github.com/{{ site.github-org-name }}/{{ site.github-repo-name }}/edit/main{{ page.url | strip_html }}"
-          >Improve this page</a
-        >.
-      </div>
+        <div
+          class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray"
+        >
+          This site is open source.
+          <a
+            href="https://github.com/{{ site.github-org-name }}/{{ site.github-repo-name }}/edit/main/{{ page.path | strip_html }}"
+            >Improve this page </a
+          >.
+        </div>
+      </footer>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
