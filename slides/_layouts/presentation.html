@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title | strip_html }}</title>
     <style>
       @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -11,31 +11,37 @@
       /* color palette from https://www.colourlovers.com/palette/361545/garden_picnic */
 
       body {
-        font-family: 'Droid Serif';
+        font-family: "Droid Serif";
       }
 
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
+      h1,
+      h2,
+      h3 {
+        font-family: "Yanone Kaffeesatz";
         font-weight: normal;
       }
 
-      h1, p {
+      h1,
+      p {
         color: white;
       }
       h2 {
-        color: #C5645E;
+        color: #c5645e;
       }
 
-      a, blockquote, strong, em {
-        color: #FADF68;
+      a,
+      blockquote,
+      strong,
+      em {
+        color: #fadf68;
       }
 
       blockquote {
         /* vertical line on the left of quotes */
         margin-left: 0px;
         padding-left: 36px;
-        border-left: 4px solid #C5645E;
-        font-family: 'Yanone Kaffeesatz';
+        border-left: 4px solid #c5645e;
+        font-family: "Yanone Kaffeesatz";
         font-size: 1.25em;
       }
 
@@ -58,32 +64,29 @@
       }
 
       .remark-slide-scaler {
-        -webkit-box-shadow: 0 0 30px #646F32;
-        box-shadow: 0 0 30px #646F32;
+        -webkit-box-shadow: 0 0 30px #646f32;
+        box-shadow: 0 0 30px #646f32;
       }
 
-      .remark-code, .remark-inline-code {
-        font-family: 'Ubuntu Mono';
+      .remark-code,
+      .remark-inline-code {
+        font-family: "Ubuntu Mono";
       }
       .remark-inline-code {
         padding-left: 10px;
         padding-right: 10px;
-        color: #FADF68;
+        color: #fadf68;
       }
     </style>
-
   </head>
   <body>
-    <textarea id="source">
-{{ content }}
-    </textarea>
-    <script src="{{site.baseurl}}/js/remark.js" type="text/javascript">
-    </script>
+    <textarea id="source">{{ content }}</textarea>
+    <script src="{{site.baseurl}}/js/remark.js" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
-        navigation: {scroll: false},
-        highlightStyle: 'monokai'
-      });
+        navigation: { scroll: false },
+        highlightStyle: "monokai",
+      })
     </script>
   </body>
 </html>
