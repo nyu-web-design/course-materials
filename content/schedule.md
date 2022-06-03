@@ -43,16 +43,16 @@ permalink: /
 
 - See the [examples directory](https://github.com/nyu-web-design/course-materials/tree/main/examples) to view source material.
 - Deployed examples:
-  - [HTML](https://nyu-web-design.github.io/course-materials/examples/1.html-intro)
-  - [HTML again](https://nyu-web-design.github.io/course-materials/examples/2.html-again)
-  - [CSS](https://nyu-web-design.github.io/course-materials/examples/3.css-intro)
-  - [CSS again](https://nyu-web-design.github.io/course-materials/examples/4.css-layout)
-  - [JQuery](https://nyu-web-design.github.io/course-materials/examples/5.jquery-intro)
-  - Responsive [scaling](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_scaling/) and [breakpoint-based](https://nyu-web-design.github.io/course-materials/examples/7.responsive-design/responsive_breakpoints/) layouts
-  - [Bootstrap](https://nyu-web-design.github.io/course-materials/examples/8.bootstrap-intro/)
-  - [Photoshop](https://nyu-web-design.github.io/course-materials/examples/9.photoshop/)
-  - [Animated GIFs](https://nyu-web-design.github.io/course-materials/examples/10.animated-gifs/)
-  - [Audacity](https://nyu-web-design.github.io/course-materials/examples/11.audacity)
+  - [HTML](examples/1.html-intro)
+  - [HTML again](examples/2.html-again)
+  - [CSS](examples/3.css-intro)
+  - [CSS again](examples/4.css-layout)
+  - [JQuery](examples/5.jquery-intro)
+  - Responsive [scaling](examples/7.responsive-design/responsive_scaling/) and [breakpoint-based](examples/7.responsive-design/responsive_breakpoints/) layouts
+  - [Bootstrap](examples/8.bootstrap-intro/)
+  - [Photoshop](examples/9.photoshop/)
+  - [Animated GIFs](examples/10.animated-gifs/)
+  - [Audacity](examples/11.audacity)
 
 ## Addendum
 
@@ -61,7 +61,3 @@ Some materials that are not currently included in the course, but have been in t
 | Date | Class | Topics        | Notes                                          | Reading/viewing due | Quiz due                                          | Assignment due                                                      |
 | :--- | :---- | :------------ | :--------------------------------------------- | :------------------ | :------------------------------------------------ | :------------------------------------------------------------------ |
 | n/a  | n/a   | Video Montage | [Soviet montage slides](slides/soviet-montage) |                     | [Video Quiz](https://forms.gle/hkHqb18CQc9uiRbk7) | [Digital Video Assignment](https://classroom.github.com/a/TXZhEhl8) |
-
-## Copyright
-
-All content herein is copyrighted, shared under the [GNU General Public License, Version 3](./LICENSE).
