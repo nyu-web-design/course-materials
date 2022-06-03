@@ -8,6 +8,8 @@ Quizes are issued to students as [Google Forms](https://forms.google.com). Submi
 
 The Google Forms admin interface contains a `Responses` tab, where student submissions are visible. This page also shows an icon that can be clicked to generate a Google Sheet showing each student's time of submission and score.
 
+![Generate spreadsheet from Google Forms](./images/google_form_generate_spreadsheet.png)
+
 ### Usage
 
 1. Translate all scores to integers between 0 and 100, and enter them into the main course gradebook.
@@ -45,12 +47,12 @@ The main course gradebook is a Google Sheet. This spreadsheet contains a script 
 
 ## Usage
 
--   Students should be sent their grades from the gradebook whenever grading has been completed for any work.
+- Students should be sent their grades from the gradebook whenever grading has been completed for any work.
 
--   To do so, in the Google Sheet gradebook, click on the `Grading` menu, and then click `Send all grades!!!`.
+- To do so, in the Google Sheet gradebook, click on the `Grading` menu, and then click `Send all grades!!!`.
 
--   The first time this menu is clicked, the Google Sheet will ask you to authorize it. Once authorized, you will have to click the option to `Send all grades now!!!` again a second time to complete the task. In subsequent times, you only have to click the menu once.
+- The first time this menu is clicked, the Google Sheet will ask you to authorize it. Once authorized, you will have to click the option to `Send all grades now!!!` again a second time to complete the task. In subsequent times, you only have to click the menu once.
 
--   If you need to send grades to just a single student, for example if a grade adjustment has been made just for that student, click the `Send one student their grades` option. Enter the row number of the student in question into the dialog that then pops up, and click the button to send.
+- If you need to send grades to just a single student, for example if a grade adjustment has been made just for that student, click the `Send one student their grades` option. Enter the row number of the student in question into the dialog that then pops up, and click the button to send.
 
 ![Send grades from gradebook](./images/gradebook_send_grades.png)
