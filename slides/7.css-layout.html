@@ -19,7 +19,6 @@ laying out the content of a web page
 1. [Calculating Widths](#widths)
 1. [Block vs. Inline Elements](#display)
 1. [A Word About Divs and Spans](#divs-spans)
-1. [Position](#position)
 1. [Float and Clear](#float-clear)
 1. [Examples](#examples)
 1. [Conclusions](#conclusions)
@@ -155,7 +154,9 @@ The actual width of an element includes:
 - any _padding_ applied to either side of it
 
 ```
-actual width = width + left border + right border + left padding + right padding
+actual width = width +
+               left border + right border +
+               left padding + right padding
 ```
 
 ---
@@ -170,7 +171,10 @@ The space consumed by an element also includes:
 - any _margin_ applied to either side of it
 
 ```
-actual width = width + left border + right border + left padding + right padding + left margin + right margin
+actual width =  width +
+                left border + right border +
+                left padding + right padding +
+                left margin + right margin
 ```
 
 ---
@@ -186,7 +190,7 @@ name: block-inline-1
 
 ## Concept
 
-Layout behavior of HTML elements is largely determined by the value of their CSS `display` property, which is one of three values.
+Layout behavior of HTML elements is largely determined by the value of their CSS `display` property. Let's focus first on 3 of these:
 
 ...
 
@@ -204,7 +208,7 @@ display: none;
 
 ...
 
-(In actuality there are other more specialized values for `display`, but we can safely ignore those for this discussion.)
+Wwe will discuss two more important `display` values, [`grid`](#grid) and [`flex`](#flex), later.
 
 ---
 
@@ -213,19 +217,19 @@ name: block-inline-2
 
 ## Common block elements
 
-The `display` property is set to `block` for many elements, including:
+By default, the `display` property is set to `block` for many elements, including:
 
-- header
-- footer
-- main
-- aside
-- article
-- section
-- h1 - h6
-- p
-- ul and ol
-- li
-- div
+- `header`
+- `footer`
+- `main`
+- `aside`
+- `article`
+- `section`
+- `h1` - `h6`
+- `p`
+- `ul` and `ol`
+- `li`
+- `div`
 - ... and more
 
 ---
@@ -235,7 +239,7 @@ name: block-inline-3
 
 ## Block element behavior
 
-The `block` value will cause the elements to have the following behavior:
+The `display: block` setting causes the elements to have the following behavior:
 
 - consume as much width as they can within their containing element
 - refuse to sit side-by-side with other elements
@@ -247,13 +251,13 @@ name: block-inline-4
 
 ## Common inline elements
 
-The `display` property is set to `inline` for many text-related elements and images, including:
+By default, the `display` property is set to `inline` for many text-related elements and images, including:
 
-- a
-- strong
-- em
-- img
-- span
+- `a`
+- `strong`
+- `em`
+- `img`
+- `span`
 - ... and more
 
 ---
@@ -342,39 +346,155 @@ You have now been warned. Don't use them.
 
 ---
 
-name: float-clear
+name: grid
 
-# Float and Clear
+# CSS Grid
 
----
+--
 
-template: float-clear
-name: float-clear-1
+## The skeleton of web layout
 
-## The secret to web layout
+The **CSS Grid** system is typically used to create the main skeletal structure of web pages. This involves the following:
 
-All layouts can be achieved with a few simple rules.
-
-- Use `block` elements for the _structure_ or _skeleton_ of the layout.
-- All `block` elements that must sit side-by-side with other elements must be given the `float: left` property
-- Immediately after the last `float: left` element in the side-by-side row, put an invisibe `div` element with the style `clear: both`.
-
-Now you can make any layout you wish for.
+1. put a [container element](#containers) around the content you want to lay out
+1. set the container element to have a `display` value of `grid`
+1. set the container element to have a `grid-template-columns` value that defines the number of columns in the grid
+1. set the container element to have a `grid-template-areas` value that defines the areas of the grid and their relative widths
 
 ---
 
-name: examples
+template: grid
 
-# Examples
+## Example - Cheerio Layout
+
+Imagine the following classic web page layout with a header, footer, main content, left navigation bar and "right-rail" sidebar:
+
+![CSS Cheerio Layout](../images/css-layout-cheerio.png)
 
 ---
 
-template: examples
-name: examples-1
+template: grid
 
-## Try them out
+## Example - Cheerio Layout (HTML)
 
-Review the code behind some of [the most common web page layouts](https://knowledge.kitchen/Common_Web_Page_Layouts_in_HTML_and_CSS).
+The `body` section of the HTML for such a page might contain code like this:
+
+```html
+<div class="container">
+  <header>Header</header>
+  <nav>Left nav</nav>
+  <main>Main content</main>
+  <aside>Right rail</aside>
+  <footer>Footer</footer>
+</div>
+```
+
+---
+
+template: grid
+
+## Example - Cheerio Layout (CSS)
+
+The critical parts of the CSS code that would produce such a layout would be:
+
+<!-- prettier-ignore-start -->
+
+```css
+/* give grid system nicknames for each of the areas we want to lay out */
+header { grid-area: header; }
+nav { grid-area: left-nav; }
+main { grid-area: main-content; }
+aside { grid-area: right-rail; }
+footer { grid-area: footer; }
+
+.container {
+  display: grid; /* turn on the grid system */
+  grid-template-columns: 1fr 2fr 1fr; /* relative widths of columns */
+
+  /* now specify which nicknamed elements to put into which grid positions */
+  grid-template-areas:
+    "header     header        header"
+    "left-nav   main-content  right-rail"
+    "footer     footer        footer";
+}
+
+
+```
+<!-- prettier-ignore-end -->
+
+---
+
+name: flex
+
+# CSS Flexbox
+
+--
+
+## Flexible layouts of components
+
+While CSS Grid is most commonly used to create the outer structures of a web page, **CSS Flexbox** is often useful for laying out the inner content pieces that go within each skeletal area.
+
+To use CSS Flex, we typically:
+
+1. put a [container element](#containers) around the content you want to lay out
+1. set the container element to have a `display` value of `flex` to turn on CSS Flex for that element.
+1. set the container's `flex-direction` property to be either `row` or `column`, depending on whether you want to line up the inner elements horizontally or vertically.
+1. set the container's `gap` property to be the desired spacing between the inner elements.
+1. determine how the inner elements are justified within the container by setting the container's `justify-content` property.
+
+---
+
+template: grid
+
+## Example - Content row
+
+For example, consider an area containing three elements that sit side-by-side, where one element is wider than the others, and all elements are separated from each other by a gap.
+
+![CSS Flexbox row](../images/css-layout-flexbox.png)
+
+- We show boxes for simplicity only, but these could be any type of real content elements: `h1`, `p`, `img`, `ul`, `div`, etc.
+
+---
+
+template: flex
+
+## Example - Content row (HTML)
+
+The HTML code for such a content area might be:
+
+```html
+<div class="row">
+  <div class="box1">box 1</div>
+  <div class="box2">box 2</div>
+  <div class="box3">box 3</div>
+</div>
+```
+
+- Note the inner elements are shown as `div` for simplicity. These could be any type of element in practice.
+
+---
+
+template: flex
+
+## Example - Content row (CSS)
+
+The critical parts of the CSS code that would produce such a layout would be:
+
+<!-- prettier-ignore-start -->
+
+```css
+.row {
+  display: flex;
+  flex-direction: row; /* options are row | row-reverse | column | column-reverse; */
+  gap: 1rem; /* gap between items, set to 1 times the font size of the root element (the html element), which by default is 16px in most browsers */
+}
+
+/* the following settings allow the three boxes to grow, where box 2 will grow up to 10 times as wide as box 1 and 2 */
+.box1, .box3 { flex-grow: 1; }
+.box2 { flex-grow: 10; }
+```
+
+<!-- prettier-ignore-end -->
 
 ---
 
