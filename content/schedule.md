@@ -48,7 +48,7 @@ permalink: /
   - [CSS](examples/3.css-intro)
   - [CSS layouts](https://nyu-web-design.github.io/layout-examples)
   - [JQuery](examples/5.jquery-intro)
-  <!--  - Responsive [scaling](examples/7.responsive-design/responsive_scaling/) and [breakpoint-based](examples/7.responsive-design/responsive_breakpoints/) layouts -->
+  - Responsive [breakpoint-based](https://nyu-web-design.github.io/responsive-layout-examples) layouts
   - [Bootstrap](examples/8.bootstrap-intro/)
   - [Photoshop](examples/9.photoshop/)
   - [Animated GIFs](examples/10.animated-gifs/)
