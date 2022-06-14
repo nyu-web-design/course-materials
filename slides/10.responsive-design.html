@@ -194,7 +194,7 @@ template: approaches
 
 ## Scaling layouts
 
-The technique for scaling layouts is the simpler of the two. [Download an example](../images/responsive_scaling.zip).
+The technique for scaling layouts is the simpler of the two.
 
 --
 
@@ -203,78 +203,6 @@ The technique for scaling layouts is the simpler of the two. [Download an exampl
 --
 
 - This allows them to scale proportionally to whatever browser width is currently being used. The layout stays the same, but simply gets bigger or smaller depending on browser width.
-
----
-
-template: approaches
-
-## Scaling layouts (continued)
-
-For example, imagine the following HTML code.
-
-```html
-<section>
-  <article>
-    <p>Foo bar baz</p>
-    <img src="images/soccer.jpg" />
-  </article>
-
-  <article>
-    <p>Foo bar baz</p>
-    <img src="images/basketball.png" />
-  </article>
-
-  <div class="clear"></div>
-</section>
-```
-
----
-
-template: approaches
-
-## Scaling layouts (continued again)
-
-The following CSS would provide a scaling layout for this section.
-
-```css
-section {
-  padding: 1.041666666667%;
-}
-
-section article {
-  background-color: orange;
-  float: left;
-  width: 48.958333333333%;
-}
-
-section article img {
-  max-width: 100%;
-}
-```
-
----
-
-template: approaches
-
-## Scaling layouts (continued once more)
-
-The **trick to calculating percentages** for scaling layouts...
-
---
-
-- First design the page as a fixed-width layout, say with a container that is 1000px wide.
-
---
-
-- Then determine the fixed widths for all the main components.
-
---
-
-- Then set the container to be 100% instead of 1000px.
-
---
-
-- And change the width of all margins, padding, borders, and widths to be their percentage equivalent.
 
 ---
 
